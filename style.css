@@ -1,0 +1,130 @@
+body {
+  background-color: rgb(230, 224, 224);
+}
+.container {
+  animation: fadeInAnimation ease 0.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.container {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+nav {
+  padding-left: 25px;
+}
+table {
+  width: 90%;
+  margin: 15px auto;
+}
+tbody {
+  color: #6c757d !important;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+td,
+th {
+  border-radius: 5%;
+  margin-left: 10px;
+}
+td,
+th {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  max-width: 200px !important;
+}
+
+.updated_ago {
+  text-align: center;
+}
+span.last {
+  font-family: poppins;
+  color: rgba(40, 167, 69, 0.6);
+  font-weight: 900;
+}
+#collection {
+  margin-top: 0;
+  background-color: rgba(32, 26, 162, 0.12549);
+  border: none;
+}
+#collection li {
+  color: rgba(32, 26, 162, 0.866667);
+  text-align: center;
+  font-family: "Archia";
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 15px 0 15px 0;
+  background: transparent;
+}
+.d-none {
+  display: none;
+}
+#change-data {
+  font-size: 15px;
+  color: #4f92eb;
+}
+section.world {
+  display: none;
+}
+#random {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 18px !important;
+}
+#confirmed,
+#recovered,
+#deceased {
+  margin: 10px auto;
+  height: 80% !important;
+  width: 80% !important;
+}
+#india-icon {
+  margin-top: 2px;
+  transform: scale(0.8);
+}
+body > div.container > div > ul > li.indicator-item:not(.active) {
+  background-color: crimson !important;
+}
+#name {
+  max-width: 100px !important;
+  width: 30%;
+  padding: 5px 0px;
+}
+td:not(#name) {
+  max-width: 10% !important;
+}
+th {
+  margin: 2px;
+  background-color: #ecedee !important;
+}
+#tc {
+  color: #ff073a;
+}
+#tr {
+  color: #007bff;
+}
+#td {
+  color: #6c757d;
+}
+#lastupdate {
+  color: rgba(40, 167, 69, 0.6);
+  font-weight: 800;
+  text-transform: uppercase;
+}
+#updatedate {
+  color: rgb(40, 167, 69);
+  font-weight: 600;
+}
+@media (max-width: 600px) {
+  a.brand-logo {
+    padding-top: 15px;
+  }
+}

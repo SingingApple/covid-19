@@ -1,0 +1,132 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Covid-19</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/bd43ee06c8.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="grey darken-4">
+      <div class="nav-wrapper">
+        <a href="index.html" class="brand-logo"
+          ><i class="fas fa-virus fa-2.5x"></i
+        ></a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"
+          ><i class="material-icons">menu</i></a
+        >
+        <ul id="nav" class="click right hide-on-med-and-down">
+          <li><a id="home" href="index.html">HOME</a></li>
+          <li><a id="graph" href="graph.html">GRAPH</a></li>
+          <li><a id="helpful" href="links.html">HELPFUL LINKS</a></li>
+          <li class="active"><a id="faq" href="faq.html">FAQs</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+      <li><a href="index.html">Home</a></li>
+      <li><a id="graph" href="graph.html">Graph</a></li>
+      <li><a id="helpful" href="links.html">Helpful Link</a></li>
+      <li class="active"><a id="faq" href="faq.html">FAQ</a></li>
+    </ul>
+    <ul id="collection" class="collection">
+      <li id="random" class="collection-item">Stay sanitized.</li>
+    </ul>
+    <div class="container">
+      <ul class="collapsible">
+        <li>
+          <div class="collapsible-header">
+            Are you official?
+          </div>
+          <div class="collapsible-body"><p>No</p></div>
+        </li>
+        <li>
+          <div class="collapsible-header">
+            What are your sources? How is the data gathered for this project?
+          </div>
+          <div class="collapsible-body">
+            <p>
+              We are using state bulletins and official handles to update our
+              numbers. The data is validated by a group of volunteers and
+              published into a Google sheet and an API. We would love it if you
+              can use this data in the fight against this virus. The source list
+              is here: https://api.covid19india.org/data.json.
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header">
+            Why does this have more positive count than MoH?
+          </div>
+          <div class="collapsible-body">
+            <p>
+              MoHFW updates the data at a scheduled time. However, we update
+              them based on state press bulletins, official handles and reliable
+              news channels which could be more recent.
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header">
+            Who are you?
+          </div>
+          <div class="collapsible-body">
+            <p>
+              We are a group of dedicated volunteers who curate and verify the
+              data coming from several sources. We extract the details, like a
+              patient's relationship with other patients to identify local and
+              community transmissions, travel history and status. We never
+              collect or expose any personally identifiable data regarding the
+              patients.
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header">
+            Why are you guys putting in time and resources to do this while not
+            gaining a single penny from it?
+          </div>
+          <div class="collapsible-body">
+            <p>
+              Because it affects all of us. Today it's someone else who is
+              getting infected; tomorrow it could be us. We need to prevent the
+              spread of this virus. We need to document the data so that people
+              with knowledge can use this data to make informed decisions.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="scripts/app.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        var elem = document.querySelector(".sidenav");
+        var instance = M.Sidenav.init(elem, {
+          inDuration: 350,
+          outDuration: 350,
+          edge: "left" //or right
+        });
+      });
+      document.addEventListener("DOMContentLoaded", function() {
+        var elems = document.querySelectorAll(".collapsible");
+        var instances = M.Collapsible.init(elems, {
+          inDuration: 300,
+          outDuration: 200
+        });
+      });
+    </script>
+  </body>
+</html>

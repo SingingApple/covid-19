@@ -1,0 +1,89 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Covid-19</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/bd43ee06c8.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="grey darken-4">
+      <div class="nav-wrapper">
+        <a href="index.html" class="brand-logo"
+          ><i class="fas fa-virus fa-2.5x"></i
+        ></a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"
+          ><i class="material-icons">menu</i></a
+        >
+        <ul id="nav" class="click right hide-on-med-and-down">
+          <li><a id="home" href="index.html">HOME</a></li>
+          <li class="active"><a id="graph" href="graph.html">GRAPH</a></li>
+          <li><a id="helpful" href="links.html">HELPFUL LINKS</a></li>
+          <li><a id="faq" href="faq.html">FAQs</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+      <li><a href="index.html">Home</a></li>
+      <li class="active"><a id="graph" href="graph.html">Graph</a></li>
+      <li><a id="helpful" href="links.html">Helpful Link</a></li>
+      <li><a id="faq" href="faq.html">FAQ</a></li>
+    </ul>
+    <ul id="collection" class="collection">
+      <li id="random" class="collection-item">Stay Home</li>
+    </ul>
+    <div class="container">
+      <div class="carousel carousel-slider">
+        <a class="carousel-item" href="#one!"
+          ><canvas id="confirmed" width="400" height="400"></canvas
+        ></a>
+        <a class="carousel-item" href="#two!"
+          ><canvas id="recovered" width="400" height="400"></canvas
+        ></a>
+        <a class="carousel-item" href="#three!"
+          ><canvas id="deceased" width="400" height="400"></canvas
+        ></a>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/data.js"></script>
+    <script src="scripts/graph.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        var elems = document.querySelectorAll(".carousel");
+        var instances = M.Carousel.init(elems, {
+          duration: 200,
+          fullWidth: true,
+          indicators: true
+        });
+      });
+
+      document.addEventListener("DOMContentLoaded", function() {
+        var elem = document.querySelector(".sidenav");
+        var instance = M.Sidenav.init(elem, {
+          inDuration: 350,
+          outDuration: 350,
+          edge: "left" //or right
+        });
+      });
+    </script>
+  </body>
+</html>
