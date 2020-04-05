@@ -127,19 +127,20 @@ th {
 #name {
   text-align: left;
 }
-.showing{
+.showing {
   font-size: 8px;
 }
-tbody.state-body tr:nth-child(1) .showing{
-  display:none;
+tbody.state-body tr:nth-child(1) .showing {
+  display: none;
 }
-  
-}
+
 @media (max-width: 600px) {
   a.brand-logo {
     padding-top: 15px;
   }
-  #confirmed, #recovered, #deceased {
+  #confirmed,
+  #recovered,
+  #deceased {
     width: 340px !important;
   }
 }
