@@ -8,12 +8,12 @@ const dSRecovered = document.querySelector("#stateR");
 const dSDeceased = document.querySelector("#stateD");
 getData().then(data => {
   console.log(data);
-  if (data.key_values[0].confirmeddelta > 0) {
-    dSConfirmed.textContent = `(+${data.key_values[0].confirmeddelta})`;
-    dSRecovered.textContent = `(+${data.key_values[0].recovereddelta})`;
-    dSDeceased.textContent = `(+${data.key_values[0].deceaseddelta})`;
+  if (JSON.parse(data.statewise[0].deltaconfirmed) > 0) {
+    dSConfirmed.textContent = `(+${data.statewise[0].deltaconfirmed})`;
+    dSRecovered.textContent = `(+${data.statewise[0].deltarecovered})`;
+    dSDeceased.textContent = `(+${data.statewise[0].deltadeaths})`;
   }
-  stime.textContent = data.key_values[0].lastupdatedtime;
+  stime.textContent = data.statewise[0].lastupdatedtime;
   data.statewise.forEach((element, index) => {
     stateTemplate(element, index);
   });
