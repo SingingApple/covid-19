@@ -1,2 +1,3 @@
 # covid-19
-Covid19 tracker with Vanilla JS 
+
+Covid19 tracker with Vanilla JS

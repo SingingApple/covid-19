@@ -3,9 +3,9 @@ const deceasedData = [];
 const dates = [];
 const recoveredData = [];
 const getChart = async () => {
-  await getData().then(data => {
+  await getData().then((data) => {
     console.log(data);
-    data.cases_time_series.forEach(element => {
+    data.cases_time_series.forEach((element) => {
       dates.push(element.date.slice(0, 6).trim());
       confirmedData.push(JSON.parse(element.totalconfirmed));
       deceasedData.push(JSON.parse(element.totaldeceased));
@@ -26,44 +26,44 @@ const getChart = async () => {
           borderColor: ["#ff073a"],
 
           borderWidth: 2,
-          pointRadius: 2
-        }
-      ]
+          pointRadius: 2,
+        },
+      ],
     },
     options: {
       legend: {
-        display: false
+        display: false,
       },
       title: {
         display: true,
         fontSize: 25,
-        text: "CONFIRMED"
+        text: "CONFIRMED",
       },
       scales: {
         xAxes: [
           {
             ticks: {
-              fontSize: 18,
-              maxTicksLimit: 8
+              fontSize: 25,
+              maxTicksLimit: 8,
             },
             gridLines: {
-              display: false
+              display: false,
             },
             label: {
-              display: false
-            }
-          }
+              display: false,
+            },
+          },
         ],
         yAxes: [
           {
             ticks: {
               beginAtZero: true,
-              fontSize: 16
-            }
-          }
-        ]
-      }
-    }
+              fontSize: 20,
+            },
+          },
+        ],
+      },
+    },
   });
   const recovered = document.getElementById("recovered").getContext("2d");
   const recoveredChart = new Chart(recovered, {
@@ -77,39 +77,39 @@ const getChart = async () => {
           backgroundColor: ["rgba(40,167,69,.6)"],
           borderColor: ["#28a745"],
           borderWidth: 2,
-          pointRadius: 2
-        }
-      ]
+          pointRadius: 2,
+        },
+      ],
     },
     options: {
       title: {
         display: true,
         text: "RECOVERED",
-        fontSize: 25
+        fontSize: 25,
       },
       legend: {
-        display: false
+        display: false,
       },
       scales: {
         xAxes: [
           {
             ticks: {
-              fontSize: 18,
-              maxTicksLimit: 8
+              fontSize: 25,
+              maxTicksLimit: 8,
             },
-            gridLines: { display: false }
-          }
+            gridLines: { display: false },
+          },
         ],
         yAxes: [
           {
             ticks: {
               beginAtZero: true,
-              fontSize: 16
-            }
-          }
-        ]
-      }
-    }
+              fontSize: 20,
+            },
+          },
+        ],
+      },
+    },
   });
   const deceased = document.getElementById("deceased").getContext("2d");
   const deceasedChart = new Chart(deceased, {
@@ -123,39 +123,39 @@ const getChart = async () => {
           backgroundColor: ["rgba(108,117,125,.6)"],
           borderColor: ["#6c757d"],
           borderWidth: 2,
-          pointRadius: 2
-        }
-      ]
+          pointRadius: 2,
+        },
+      ],
     },
     options: {
       legend: {
-        display: false
+        display: false,
       },
       title: {
         display: true,
         fontSize: 25,
-        text: "DECEASED"
+        text: "DECEASED",
       },
       scales: {
         xAxes: [
           {
             ticks: {
-              fontSize: 18,
-              maxTicksLimit: 8
+              fontSize: 25,
+              maxTicksLimit: 8,
             },
-            gridLines: { display: false }
-          }
+            gridLines: { display: false },
+          },
         ],
         yAxes: [
           {
             ticks: {
               beginAtZero: true,
-              fontSize: 16
-            }
-          }
-        ]
-      }
-    }
+              fontSize: 20,
+            },
+          },
+        ],
+      },
+    },
   });
 };
 getChart();
