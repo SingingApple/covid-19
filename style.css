@@ -85,6 +85,7 @@ section.world {
   margin: 10px auto;
   height: 80% !important;
   width: 80% !important;
+  transform: scale(1.25) !important;
 }
 #india-icon {
   margin-top: 2px;
