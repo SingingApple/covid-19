@@ -14,18 +14,19 @@ getData().then(data => {
     dSDeceased.textContent = `(+${data.statewise[0].deltadeaths})`;
   }
   stime.textContent = data.statewise[0].lastupdatedtime;
-  data.statewise.forEach((element, index) => {
-    stateTemplate(element, index);
+  data.statewise.forEach(element => {
+    stateTemplate(element);
   });
 });
 const html = "";
 const stateTemplate = state => {
   const html = `<tr>
-  <td id="name">${state.state}</td>
+  <td id="name">${state.state} <span class="showing" id="tc">+(${state.deltaconfirmed})</span></td>
   <td>${state.confirmed}</td>
   <td>${state.recovered}</td>
   <td>${state.deaths}</td>
 </tr>`;
+
   sbody.innerHTML += html;
 };
 const chtml = "";

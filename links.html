@@ -3,14 +3,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Covid-19</title>
+    <meta name="theme-color" content="#212121" />
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#212121" />
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#212121" />
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
     <script
-    src="https://kit.fontawesome.com/bd43ee06c8.js"
-    crossorigin="anonymous"
-  ></script>
+      src="https://kit.fontawesome.com/bd43ee06c8.js"
+      crossorigin="anonymous"
+    ></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
@@ -20,21 +25,25 @@
   <body>
     <nav class="grey darken-4">
       <div class="nav-wrapper">
-        <a href="index.html" class="brand-logo"><i class="fas fa-virus fa-2.5x"></i></a>
+        <a href="index.html" class="brand-logo"
+          ><i class="fas fa-virus fa-2.5x"></i
+        ></a>
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"
           ><i class="material-icons">menu</i></a
         >
         <ul id="nav" class="click right hide-on-med-and-down">
           <li><a id="home" href="index.html">HOME</a></li>
           <li><a id="graph" href="graph.html">GRAPH</a></li>
-          <li class="active"><a id="helpful" href="links.html">HELPFUL LINKS</a></li>
+          <li class="active">
+            <a id="helpful" href="links.html">HELPFUL LINKS</a>
+          </li>
           <li><a id="faq" href="faq.html">FAQs</a></li>
         </ul>
       </div>
     </nav>
 
     <ul class="sidenav" id="mobile-demo">
-      <li><a href="home.html">Home</a></li>
+      <li><a href="index.html">Home</a></li>
       <li><a id="graph" href="graph.html">Graph</a></li>
       <li class="active"><a id="helpful" href="links.html">Helpful Link</a></li>
       <li><a id="faq" href="faq.html">FAQ</a></li>
@@ -43,29 +52,37 @@
       <li id="random" class="collection-item">Social Distancing is the key.</li>
     </ul>
     <div class="container scale-transition">
-    <p><pre><center>      
-      
-    
-      <b>MINISTRY OF HEALTH AND FAMILY WELFARE, GOV. OF INDIA</b>
-      <a href="HTTPS://WWW.MOHFW.GOV.IN" target='_blank'>HTTPS://WWW.MOHFW.GOV.IN/</a>
-   
-   
-      <b>WHO : COVID-19 HOME PAGE</b>
-      <a href="HTTPS://WWW.WHO.INT/EMERGENCIES/DISEASES/NOVEL-CORONAVIRUS-2019" target='_blank'>HTTPS://WWW.WHO.INT/EMERGENCIES/DISEASES/NOVEL-CORONAVIRUS-2019</a>
-    
-    
-      <b>CDC</b>
-      <a href="HTTPS://WWW.CDC.GOV/CORONAVIRUS/2019-NCOV/FAQ.HTML" target='_blank'>HTTPS://WWW.CDC.GOV/CORONAVIRUS/2019-NCOV/FAQ.HTML</a>
-    
-    
-      <b>COVID-19 GLOBAL TRACKER</b>
-      <a href="HTTPS://CORONAVIRUS.THEBASELAB.COM/" target='_blank'>HTTPS://CORONAVIRUS.THEBASELAB.COM/</a>
-    </center></pre></p>
-  </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <p>
+        <center>
+          <b>MINISTRY OF HEALTH AND FAMILY WELFARE, GOV. OF INDIA</b>
+          <a href="HTTPS://WWW.MOHFW.GOV.IN" target="_blank"
+            >HTTPS://WWW.MOHFW.GOV.IN/</a
+          >
+
+          <b>WHO : COVID-19 HOME PAGE</b>
+          <a
+            href="HTTPS://WWW.WHO.INT/EMERGENCIES/DISEASES/NOVEL-CORONAVIRUS-2019"
+            target="_blank"
+            >HTTPS://WWW.WHO.INT/EMERGENCIES/DISEASES/NOVEL-CORONAVIRUS-2019</a
+          >
+
+          <b>CDC</b>
+          <a
+            href="HTTPS://WWW.CDC.GOV/CORONAVIRUS/2019-NCOV/FAQ.HTML"
+            target="_blank"
+            >HTTPS://WWW.CDC.GOV/CORONAVIRUS/2019-NCOV/FAQ.HTML</a
+          >
+
+          <b>COVID-19 GLOBAL TRACKER</b>
+          <a href="HTTPS://CORONAVIRUS.THEBASELAB.COM/" target="_blank"
+            >HTTPS://CORONAVIRUS.THEBASELAB.COM/</a
+          >
+        </center>
+      </p>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="scripts/app.js"></script>
     <script>
-      
       document.addEventListener("DOMContentLoaded", function() {
         var elem = document.querySelector(".sidenav");
         var instance = M.Sidenav.init(elem, {
